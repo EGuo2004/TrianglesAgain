@@ -30,16 +30,16 @@ public class Triangle{
   }
 
   public String classify() {
-    double a = v1.distanceTo(v2);
-    double b = v2.distanceTo(v3);
-    double c = v1.distanceTo(v3);
+    double a = (Math.round(v1.distanceTo(v2) * 1000))/1000;
+    double b = (Math.round(v2.distanceTo(v3) * 1000))/1000;
+    double c = (Math.round(v1.distanceTo(v3) * 1000))/1000;
     if ( a == b || b == c || a == c) {
-      return "isoceles";
+      return "isoceles ";
     }
     if ( a == b && a == c) {
-      return "equilateral";
+      return "equilateral ";
     }
-      return "scalene";
+      return "scalene ";
   }
 
   public String toString() {
