@@ -28,4 +28,19 @@ public class Triangle{
     double c1 = s - c;
     return Math.sqrt(s * a1 * b1 * c1);
   }
+
+  public String classify() {
+    double a = v1.distanceTo(v2);
+    double b = v2.distanceTo(v3);
+    double c = v1.distanceTo(v3);
+    if ( a == b || b == c || a == c) {
+      return "isoceles";
+    }
+    if ( a == b && a == c) {
+      return "equilateral";
+    }
+    if ( a != b && a != c && b != c) {
+      return "scalene";
+    }
+  }
 }
